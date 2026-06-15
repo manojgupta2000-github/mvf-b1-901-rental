@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Montvert Finesse — 3BHK Furnished Apartment, Baner Pune</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+       background: #f3f0eb; color: #1e2832; line-height: 1.6; }
+:root {
+  --ink:    #1e2832;
+  --mid:    #5c6878;
+  --faint:  #8a95a3;
+  --linen:  #f3f0eb;
+  --white:  #ffffff;
+  --olive:  #4a6741;
+  --olive-lt: #e8efe6;
+  --rule:   #e0dbd4;
+  --sh: 0 1px 3px rgba(0,0,0,.07), 0 4px 12px rgba(0,0,0,.05);
+}
+
+/* NAV */
+.topbar {
+  background: var(--white); border-bottom: 1px solid var(--rule);
+  padding: 0 5%; display: flex; align-items: center;
+  justify-content: space-between; height: 52px;
+  position: sticky; top: 0; z-index: 100;
+}
+.tb-brand { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); font-weight: 500; }
+.tb-cta { background: var(--olive); color: #fff; padding: .4rem 1.1rem;
+           border-radius: 4px; text-decoration: none; font-size: .8rem; font-weight: 500; }
+
+/* HERO */
+.hero { max-width: 1100px; margin: 28px auto 0; padding: 0 5%; }
+.mosaic {
+  display: grid; grid-template-columns: 2fr 1fr;
+  grid-template-rows: 160px 160px 160px; gap: 4px;
+  border-radius: 10px; overflow: hidden; position: relative;
+}
+.m-main { grid-row: 1 / 4; overflow: hidden; background: #c8c4bc; cursor: pointer; }
+.m-side  { overflow: hidden; background: #c8c4bc; cursor: pointer; }
+.m-main img, .m-side img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .5s ease;
+}
+.m-main:hover img, .m-side:hover img { transform: scale(1.04); }
+.m-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(15,22,30,.72) 0%, transparent 55%);
+  padding: 28px 28px 22px; pointer-events: none;
+}
+.m-overlay h1 {
+  font-family: Georgia, serif; font-weight: 400;
+  font-size: clamp(1.4rem, 2.8vw, 2rem); color: #fff; line-height: 1.2;
+}
+.m-overlay .loc { color: rgba(255,255,255,.7); font-size: .83rem; margin-top: 5px; }
+.m-badge {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(15,22,30,.5); color: rgba(255,255,255,.85);
+  padding: 4px 10px; border-radius: 20px; font-size: .73rem; letter-spacing: .04em;
+  pointer-events: none;
+}
+
+/* SPEC STRIP */
+.spec-wrap { max-width: 1100px; margin: 0 auto; padding: 0 5%; }
+.spec-bar {
+  background: var(--white); border-radius: 0 0 10px 10px;
+  display: grid; grid-template-columns: repeat(4,1fr);
+  overflow: hidden; box-shadow: var(--sh);
+}
+.spec-cell { padding: 15px 18px; border-right: 1px solid var(--rule); }
+.spec-cell:last-child { border-right: none; }
+.spec-lbl { font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
+.spec-val { font-size: .95rem; font-weight: 600; color: var(--ink); }
+.pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--olive-lt); color: var(--olive);
+  padding: 3px 9px; border-radius: 20px;
+  font-size: .71rem; font-weight: 600;
+}
+.pill::before { content:''; width:6px; height:6px; background:var(--olive); border-radius:50%; }
+
+/* CONTENT */
+.content { max-width: 1100px; margin: 28px auto 0; padding: 0 5%; }
+.two-col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; margin-bottom: 24px; }
+.card { background: var(--white); border-radius: 10px; padding: 24px; box-shadow: var(--sh); }
+.ctitle {
+  font-size: .66rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--faint); font-weight: 600;
+  margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--rule);
+}
+.hl-list { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+.hl { display: flex; gap: 12px; align-items: flex-start; }
+.hi { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+.ht { font-size: .9rem; font-weight: 600; color: var(--ink); }
+.hd { font-size: .79rem; color: var(--mid); margin-top: 1px; line-height: 1.45; }
+.drow { display: flex; justify-content: space-between; align-items: baseline;
+         padding: 8px 0; border-bottom: 1px solid var(--rule); gap: 12px; }
+.drow:last-child { border-bottom: none; }
+.dk { font-size: .81rem; color: var(--mid); flex-shrink: 0; }
+.dv { font-size: .87rem; font-weight: 500; text-align: right; max-width: 60%; }
+
+/* GALLERY */
+.gal-section { margin-bottom: 24px; }
+.gal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.gal-label { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+.gal-count { font-size: .79rem; color: var(--faint); }
+
+/* TABS */
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.tab {
+  padding: .35rem .9rem; border: 1.5px solid var(--rule);
+  background: transparent; border-radius: 30px;
+  font-size: .78rem; color: var(--mid);
+  cursor: pointer; font-family: inherit; transition: all .18s;
+}
+.tab.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+.tab:hover:not(.on) { border-color: var(--ink); color: var(--ink); }
+.tab .n { font-size: .69rem; opacity: .65; margin-left: 3px; }
+
+.photo-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; }
+.pc {
+  border-radius: 6px; overflow: hidden; background: #d0ccc5;
+  position: relative; cursor: pointer;
+}
+.pc img {
+  width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover;
+  transition: transform .35s ease;
+}
+.pc:hover img { transform: scale(1.06); }
+.pl {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(15,22,30,.65), transparent);
+  color: rgba(255,255,255,.88); font-size: .66rem;
+  letter-spacing: .05em; text-transform: uppercase;
+  padding: 16px 8px 5px;
+}
+.pc.hide { display: none; }
+
+/* LIGHTBOX */
+#lb {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(10,14,18,.95); align-items: center;
+  justify-content: center; flex-direction: column;
+}
+#lb.on { display: flex; }
+#lb-img { max-width: 92vw; max-height: 88vh; object-fit: contain; border-radius: 4px; }
+.lb-x { position: absolute; top: 1rem; right: 1.25rem; background: none;
+          border: none; color: #fff; font-size: 1.8rem; cursor: pointer;
+          opacity: .7; z-index: 501; line-height: 1; }
+.lb-x:hover { opacity: 1; }
+.lb-arr {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.08); border: none; color: #fff;
+  font-size: 1.5rem; width: 44px; height: 44px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  z-index: 501; transition: background .2s;
+}
+.lb-arr:hover { background: rgba(255,255,255,.22); }
+#lb-prev { left: 1rem; } #lb-next { right: 1rem; }
+#lb-info { color: rgba(255,255,255,.5); font-size: .8rem; margin-top: .7rem; }
+
+/* LOCATION */
+.loc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+.nearby-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 4px; }
+.ni {
+  display: flex; align-items: center; gap: 7px;
+  font-size: .79rem; color: var(--mid);
+  padding: 7px 9px; background: var(--linen);
+  border-radius: 6px; border: 1px solid var(--rule);
+}
+.map-btn {
+  display: inline-block; margin-top: 14px; background: var(--ink);
+  color: #fff; padding: 8px 16px; border-radius: 5px;
+  text-decoration: none; font-size: .79rem; font-weight: 500;
+}
+
+/* ENQUIRY */
+.enquiry {
+  background: var(--white); border-radius: 10px;
+  padding: 28px; box-shadow: var(--sh); margin-bottom: 36px;
+  display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: start;
+}
+.eq-title { font-family: Georgia, serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 4px; }
+.eq-sub { font-size: .81rem; color: var(--mid); margin-bottom: 18px; }
+.rental-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1px; background: var(--rule);
+  border-radius: 8px; overflow: hidden; border: 1px solid var(--rule);
+}
+.rc { background: var(--white); padding: 11px 13px; }
+.rc:nth-child(n+4) { background: #faf9f7; }
+.rk { font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); margin-bottom: 2px; }
+.rv { font-size: .9rem; font-weight: 600; }
+.eq-right { text-align: center; min-width: 165px; }
+.con-name { font-size: 1rem; font-weight: 600; margin-bottom: 1px; }
+.con-num { font-size: .83rem; color: var(--mid); margin-bottom: 16px; }
+.wa-btn {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  background: #25d366; color: #fff; padding: 10px 18px;
+  border-radius: 6px; text-decoration: none; font-weight: 600;
+  font-size: .87rem; margin-bottom: 8px; transition: opacity .2s;
+}
+.wa-btn:hover { opacity: .88; }
+.call-link { color: var(--olive); text-decoration: none; font-size: .81rem; font-weight: 500; }
+
+footer { text-align: center; padding: 14px 5%; font-size: .72rem; color: var(--faint); background: var(--white); border-top: 1px solid var(--rule); }
+
+/* ACCESS BANNER */
+.access-banner {
+  background: #fff8e1; border-bottom: 1px solid #ffe082;
+  padding: 10px 5%; display: flex; align-items: center;
+  justify-content: space-between; gap: 12px; font-size: .82rem;
+  color: #6d4c00;
+}
+.access-banner.hidden { display: none; }
+.access-banner a { color: #4a6741; font-weight: 600; }
+.banner-x { background: none; border: none; cursor: pointer; font-size: 1.1rem; color: #6d4c00; padding: 0 4px; flex-shrink: 0; }
+
+/* IMG PLACEHOLDER */
+.pc img.error, .m-main img.error, .m-side img.error {
+  opacity: 0; position: absolute;
+}
+.pc.img-err, .m-main.img-err, .m-side.img-err {
+  display: flex; align-items: center; justify-content: center;
+  background: #e8e4dc; min-height: 80px;
+}
+.pc.img-err::after, .m-main.img-err::after, .m-side.img-err::after {
+  content: '🔒';
+  font-size: 1.5rem; opacity: .45;
+}
+
+
+/* BROKER CTA */
+.broker-cta {
+  background: var(--linen); border: 1px solid var(--rule);
+  border-radius: 10px; padding: 20px 18px; text-align: center;
+}
+.broker-icon { font-size: 2rem; margin-bottom: 10px; }
+.broker-msg {
+  font-size: .95rem; font-weight: 600; color: var(--ink);
+  line-height: 1.4; margin-bottom: 8px;
+}
+.broker-note {
+  font-size: .75rem; color: var(--faint); line-height: 1.4;
+}
+
+/* NOT INCLUDED NOTE */
+.not-incl {
+  display: flex; align-items: flex-start; gap: 9px;
+  margin-top: 16px; padding: 10px 13px;
+  background: #fef9ec; border: 1px solid #f0d980;
+  border-radius: 7px; font-size: .81rem; color: #5a4a00;
+  line-height: 1.45;
+}
+.ni-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.not-incl strong { color: #3d3200; }
+
+/* AMENITIES GRID */
+.am-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:2px; }
+.am { display:flex; align-items:center; gap:8px; background:var(--linen); border-radius:6px; padding:7px 10px; border:1px solid var(--rule); }
+.ai { font-size:1.1rem; flex-shrink:0; }
+.al { font-size:.78rem; color:var(--mid); font-weight:500; line-height:1.3; }
+
+@media (max-width: 900px) {
+  .two-col, .loc-row { grid-template-columns: 1fr; }
+  .photo-grid { grid-template-columns: repeat(3,1fr); }
+  .spec-bar { grid-template-columns: repeat(2,1fr); }
+  .enquiry { grid-template-columns: 1fr; }
+  .eq-right { text-align: left; }
+  .rental-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 600px) {
+  .mosaic { grid-template-rows: 120px 120px 120px; }
+  .photo-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 420px) {
+  .mosaic { grid-template-columns: 1fr; grid-template-rows: 220px 110px 110px; }
+  .m-main { grid-row: auto; grid-column: 1; }
+  .photo-grid { grid-template-columns: repeat(2,1fr); }
+}
+</style>
+</head>
+<body>
+
+<div class="access-banner hidden" id="accessBanner">
+  <span>📸 <strong>Photos not showing?</strong> &nbsp;The Google Drive folder needs to be public: open Drive → right-click the photos folder → <strong>Share</strong> → General access → <strong>Anyone with the link</strong> → Viewer → Done. Then reload.</span>
+  <button class="banner-x" onclick="document.getElementById('accessBanner').classList.add('hidden')" title="Dismiss">✕</button>
+</div>
+
+<nav class="topbar">
+  <span class="tb-brand">Montvert Finesse &nbsp;·&nbsp; Baner, Pune</span>
+  <a href="#enquiry" class="tb-cta">Enquire with Broker</a>
+</nav>
+
+<div class="hero">
+  <div class="mosaic">
+    <div class="m-main" onclick="openLb('1K23_q0mBkFSLGSlPBkuNbPQ235jqKVCF')">
+      <img src="https://drive.google.com/thumbnail?id=1K23_q0mBkFSLGSlPBkuNbPQ235jqKVCF&sz=w1200" alt="Hall & Dining" loading="eager" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+    </div>
+    <div class="m-side" onclick="openLb('1vVMAoDTG0KMaQkkQzoykSPiUjjCIqXue')">
+      <img src="https://drive.google.com/thumbnail?id=1vVMAoDTG0KMaQkkQzoykSPiUjjCIqXue&sz=w800" alt="Hall & Dining" loading="eager" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+    </div>
+    <div class="m-side" onclick="openLb('19Bwr4e4m5btO4UjVQS0ehCCZ5UotYods')">
+      <img src="https://drive.google.com/thumbnail?id=19Bwr4e4m5btO4UjVQS0ehCCZ5UotYods&sz=w800" alt="Hall & Dining" loading="eager" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+    </div>
+    <div class="m-side" onclick="openLb('1vNJAI2O58qQqor80UFeze5AV8eZZxbtT')">
+      <img src="https://drive.google.com/thumbnail?id=1vNJAI2O58qQqor80UFeze5AV8eZZxbtT&sz=w800" alt="Hall & Dining" loading="eager" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+    </div>
+    <div class="m-overlay">
+      <h1>Furnished 3BHK Apartment</h1>
+      <div class="loc">📍 Montvert Finesse, Baner-Pashan Link Road, Pune</div>
+    </div>
+    <div class="m-badge">34 photos</div>
+  </div>
+</div>
+
+<div class="spec-wrap">
+  <div class="spec-bar">
+    <div class="spec-cell"><div class="spec-lbl">Configuration</div><div class="spec-val">3 BHK + 3 Bath</div></div>
+    <div class="spec-cell"><div class="spec-lbl">Area</div><div class="spec-val">1,650 sq.ft.</div></div>
+    <div class="spec-cell"><div class="spec-lbl">Floor · View</div><div class="spec-val">9th · 3-side open</div></div>
+    <div class="spec-cell"><div class="spec-lbl">Status</div><div class="spec-val"><span class="pill">Available now</span></div></div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="two-col">
+    <div class="card">
+      <div class="ctitle">What's inside the flat</div>
+      <ul class="hl-list">
+        <li class="hl"><span class="hi">✨</span><div><div class="ht">Premium interior throughout</div><div class="hd">False ceiling with profile lights, designer wallpapers and feature walls — gives the flat a hotel-like finish</div></div></li>
+        <li class="hl"><span class="hi">🛋️</span><div><div class="ht">Designer living &amp; dining setup</div><div class="hd">Designer TV unit, designer crockery unit and dining table — fully styled and included</div></div></li>
+        <li class="hl"><span class="hi">🛏️</span><div><div class="ht">Three furnished bedrooms</div><div class="hd">Designer wardrobes, beds, dressing mirrors and study tables in each room</div></div></li>
+        <li class="hl"><span class="hi">🍳</span><div><div class="ht">Modular kitchen</div><div class="hd">Full-length trolleys, chimney, overhead racks and a dry balcony with sink</div></div></li>
+        <li class="hl"><span class="hi">🌿</span><div><div class="ht">Three large balconies</div><div class="hd">3-side open layout with excellent cross ventilation and natural light throughout</div></div></li>
+        <li class="hl"><span class="hi">🎨</span><div><div class="ht">Freshly repainted throughout</div><div class="hd">Premium luster finish on every wall — move-in ready, zero touch-ups needed</div></div></li>
+        <li class="hl"><span class="hi">🚪</span><div><div class="ht">Designer entrance &amp; two shoe racks</div><div class="hd">Stylish main gate with two large shoe racks — one inside, one outside the flat</div></div></li>
+      </ul>
+      <div class="not-incl">
+        <span class="ni-icon">ℹ️</span>
+        <div><strong>Not included:</strong> TV, refrigerator, washing machine &amp; sofa — to be arranged by tenant</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="card">
+        <div class="ctitle">Property details</div>
+        <div class="drow"><span class="dk">Furnishing</span><span class="dv">Fully Furnished</span></div>
+        <div class="drow"><span class="dk">Parking</span><span class="dv">1 dedicated car park</span></div>
+        <div class="drow"><span class="dk">Preferred tenants</span><span class="dv">Family / Professionals</span></div>
+        <div class="drow"><span class="dk">Agreement type</span><span class="dv">Leave &amp; License</span></div>
+        <div class="drow"><span class="dk">Minimum lease</span><span class="dv">11 months</span></div>
+        <div class="drow"><span class="dk">Notice period</span><span class="dv">1–2 months</span></div>
+      </div>
+      <div class="card">
+        <div class="ctitle">Society Amenities</div>
+        <div class="am-grid">
+          <div class="am"><span class="ai">🎉</span><span class="al">Clubhouse &amp; Party Hall</span></div>
+          <div class="am"><span class="ai">🏊</span><span class="al">Swimming Pool</span></div>
+          <div class="am"><span class="ai">🌳</span><span class="al">Landscaped Garden</span></div>
+          <div class="am"><span class="ai">👶</span><span class="al">Children's Play Area</span></div>
+          <div class="am"><span class="ai">🪑</span><span class="al">Senior Citizen Seating</span></div>
+          <div class="am"><span class="ai">🏃</span><span class="al">Sports &amp; Events Ground</span></div>
+          <div class="am"><span class="ai">🔒</span><span class="al">24×7 Security &amp; CCTV</span></div>
+          <div class="am"><span class="ai">🔥</span><span class="al">Piped Gas</span></div>
+          <div class="am"><span class="ai">🅿️</span><span class="al">Dedicated Parking</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="gal-section">
+    <div class="gal-header">
+      <span class="gal-label">All photos</span>
+      <span class="gal-count">34 photos · Montvert Finesse, Baner</span>
+    </div>
+    <div class="tabs">
+      <button class="tab on" data-filter="all">All <span class="n">(34)</span></button>
+      <button class="tab" data-filter="hall">Hall &amp; Dining <span class="n">(21)</span></button>
+      <button class="tab" data-filter="bedroom">Bedrooms <span class="n">(5)</span></button>
+      <button class="tab" data-filter="kitchen">Kitchen <span class="n">(4)</span></button>
+      <button class="tab" data-filter="bathroom">Bathrooms <span class="n">(4)</span></button>
+    </div>
+    <div class="photo-grid" id="pgrid">
+      <div class="pc" data-cat="hall" data-id="1o2qn-Aj_U--GtusGUDZI1P3sVocKWhxL" onclick="openLb('1o2qn-Aj_U--GtusGUDZI1P3sVocKWhxL')">
+        <img src="https://drive.google.com/thumbnail?id=1o2qn-Aj_U--GtusGUDZI1P3sVocKWhxL&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1Jja1mwLvFPBrVOXMqYaCB9rZ4st3UoM-" onclick="openLb('1Jja1mwLvFPBrVOXMqYaCB9rZ4st3UoM-')">
+        <img src="https://drive.google.com/thumbnail?id=1Jja1mwLvFPBrVOXMqYaCB9rZ4st3UoM-&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1AkxrpaCx0PBqO_WGhYsAhKaun7MVFKI_" onclick="openLb('1AkxrpaCx0PBqO_WGhYsAhKaun7MVFKI_')">
+        <img src="https://drive.google.com/thumbnail?id=1AkxrpaCx0PBqO_WGhYsAhKaun7MVFKI_&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1c2IWXTbSLdQBN_YnoujTbM0aTjlqORYI" onclick="openLb('1c2IWXTbSLdQBN_YnoujTbM0aTjlqORYI')">
+        <img src="https://drive.google.com/thumbnail?id=1c2IWXTbSLdQBN_YnoujTbM0aTjlqORYI&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1wRnKq3QxLmHSLJQ8CJyfLBuLMKp6CcVP" onclick="openLb('1wRnKq3QxLmHSLJQ8CJyfLBuLMKp6CcVP')">
+        <img src="https://drive.google.com/thumbnail?id=1wRnKq3QxLmHSLJQ8CJyfLBuLMKp6CcVP&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1tcj3A__VLk2-IUJTW4YBINF5NRPkgv37" onclick="openLb('1tcj3A__VLk2-IUJTW4YBINF5NRPkgv37')">
+        <img src="https://drive.google.com/thumbnail?id=1tcj3A__VLk2-IUJTW4YBINF5NRPkgv37&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1vNJAI2O58qQqor80UFeze5AV8eZZxbtT" onclick="openLb('1vNJAI2O58qQqor80UFeze5AV8eZZxbtT')">
+        <img src="https://drive.google.com/thumbnail?id=1vNJAI2O58qQqor80UFeze5AV8eZZxbtT&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="10a5ebf3vQD0oOQmEMDNiI_hK9yWqFsGM" onclick="openLb('10a5ebf3vQD0oOQmEMDNiI_hK9yWqFsGM')">
+        <img src="https://drive.google.com/thumbnail?id=10a5ebf3vQD0oOQmEMDNiI_hK9yWqFsGM&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1LgoYNzhIeXbmP3aP0hCIUB5Y5i4q8AwR" onclick="openLb('1LgoYNzhIeXbmP3aP0hCIUB5Y5i4q8AwR')">
+        <img src="https://drive.google.com/thumbnail?id=1LgoYNzhIeXbmP3aP0hCIUB5Y5i4q8AwR&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1vVMAoDTG0KMaQkkQzoykSPiUjjCIqXue" onclick="openLb('1vVMAoDTG0KMaQkkQzoykSPiUjjCIqXue')">
+        <img src="https://drive.google.com/thumbnail?id=1vVMAoDTG0KMaQkkQzoykSPiUjjCIqXue&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1F3pGoabsGid_XXmZi_dt01HhNz2ns3aR" onclick="openLb('1F3pGoabsGid_XXmZi_dt01HhNz2ns3aR')">
+        <img src="https://drive.google.com/thumbnail?id=1F3pGoabsGid_XXmZi_dt01HhNz2ns3aR&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1JDQYa_UtI2kchJ_XyzUzIcavowH4XOA7" onclick="openLb('1JDQYa_UtI2kchJ_XyzUzIcavowH4XOA7')">
+        <img src="https://drive.google.com/thumbnail?id=1JDQYa_UtI2kchJ_XyzUzIcavowH4XOA7&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1gKVIforQ6gAOiX0BQx-o00Ur-yN7tkxT" onclick="openLb('1gKVIforQ6gAOiX0BQx-o00Ur-yN7tkxT')">
+        <img src="https://drive.google.com/thumbnail?id=1gKVIforQ6gAOiX0BQx-o00Ur-yN7tkxT&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1w2Riw114ysW-KQlE8itn9aqHGXBXIR89" onclick="openLb('1w2Riw114ysW-KQlE8itn9aqHGXBXIR89')">
+        <img src="https://drive.google.com/thumbnail?id=1w2Riw114ysW-KQlE8itn9aqHGXBXIR89&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1K23_q0mBkFSLGSlPBkuNbPQ235jqKVCF" onclick="openLb('1K23_q0mBkFSLGSlPBkuNbPQ235jqKVCF')">
+        <img src="https://drive.google.com/thumbnail?id=1K23_q0mBkFSLGSlPBkuNbPQ235jqKVCF&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1zdXuFR8vmv8OTLEz_ePoHWdiEAx-jILy" onclick="openLb('1zdXuFR8vmv8OTLEz_ePoHWdiEAx-jILy')">
+        <img src="https://drive.google.com/thumbnail?id=1zdXuFR8vmv8OTLEz_ePoHWdiEAx-jILy&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1bPt6j62SAFJQSXK1iVg1gExa2g3Trjw-" onclick="openLb('1bPt6j62SAFJQSXK1iVg1gExa2g3Trjw-')">
+        <img src="https://drive.google.com/thumbnail?id=1bPt6j62SAFJQSXK1iVg1gExa2g3Trjw-&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="19Bwr4e4m5btO4UjVQS0ehCCZ5UotYods" onclick="openLb('19Bwr4e4m5btO4UjVQS0ehCCZ5UotYods')">
+        <img src="https://drive.google.com/thumbnail?id=19Bwr4e4m5btO4UjVQS0ehCCZ5UotYods&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1taukEBwMEUUG7PXXERLRPNvJZEGBdbrQ" onclick="openLb('1taukEBwMEUUG7PXXERLRPNvJZEGBdbrQ')">
+        <img src="https://drive.google.com/thumbnail?id=1taukEBwMEUUG7PXXERLRPNvJZEGBdbrQ&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1rBsOPz_604JXmZYChKPY7--iDl93G-W_" onclick="openLb('1rBsOPz_604JXmZYChKPY7--iDl93G-W_')">
+        <img src="https://drive.google.com/thumbnail?id=1rBsOPz_604JXmZYChKPY7--iDl93G-W_&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="hall" data-id="1ebPm_iXDJ5CvSHwj4D69EDSbAon496OG" onclick="openLb('1ebPm_iXDJ5CvSHwj4D69EDSbAon496OG')">
+        <img src="https://drive.google.com/thumbnail?id=1ebPm_iXDJ5CvSHwj4D69EDSbAon496OG&sz=w600" alt="Hall & Dining" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Hall & Dining</div>
+      </div>
+      <div class="pc" data-cat="bedroom" data-id="19wygzQWQY0zDfW8AiehpdddP1dEkLCRq" onclick="openLb('19wygzQWQY0zDfW8AiehpdddP1dEkLCRq')">
+        <img src="https://drive.google.com/thumbnail?id=19wygzQWQY0zDfW8AiehpdddP1dEkLCRq&sz=w600" alt="Bedrooms" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Bedrooms</div>
+      </div>
+      <div class="pc" data-cat="bedroom" data-id="1tGnTtJLIS9kODTZ3Q2dZ1aH61s8BXNO1" onclick="openLb('1tGnTtJLIS9kODTZ3Q2dZ1aH61s8BXNO1')">
+        <img src="https://drive.google.com/thumbnail?id=1tGnTtJLIS9kODTZ3Q2dZ1aH61s8BXNO1&sz=w600" alt="Bedrooms" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Bedrooms</div>
+      </div>
+      <div class="pc" data-cat="bedroom" data-id="1aJ0oe6LnjCyc6GzyIBsWlhqfmdaC6TDu" onclick="openLb('1aJ0oe6LnjCyc6GzyIBsWlhqfmdaC6TDu')">
+        <img src="https://drive.google.com/thumbnail?id=1aJ0oe6LnjCyc6GzyIBsWlhqfmdaC6TDu&sz=w600" alt="Bedrooms" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Bedrooms</div>
+      </div>
+      <div class="pc" data-cat="bedroom" data-id="1qvb6P-SeuxCn26pbksWVsvodjur4IBSu" onclick="openLb('1qvb6P-SeuxCn26pbksWVsvodjur4IBSu')">
+        <img src="https://drive.google.com/thumbnail?id=1qvb6P-SeuxCn26pbksWVsvodjur4IBSu&sz=w600" alt="Bedrooms" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Bedrooms</div>
+      </div>
+      <div class="pc" data-cat="bedroom" data-id="1mDF76J6RPuWtzOgexB_Gvyi7efU6Eooj" onclick="openLb('1mDF76J6RPuWtzOgexB_Gvyi7efU6Eooj')">
+        <img src="https://drive.google.com/thumbnail?id=1mDF76J6RPuWtzOgexB_Gvyi7efU6Eooj&sz=w600" alt="Bedrooms" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Bedrooms</div>
+      </div>
+      <div class="pc" data-cat="kitchen" data-id="1EjzSOTJD2KItchsF__v-q3aI6cr383i2" onclick="openLb('1EjzSOTJD2KItchsF__v-q3aI6cr383i2')">
+        <img src="https://drive.google.com/thumbnail?id=1EjzSOTJD2KItchsF__v-q3aI6cr383i2&sz=w600" alt="Kitchen" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Kitchen</div>
+      </div>
+      <div class="pc" data-cat="kitchen" data-id="12fB5jEhX2KIvxLBZwUZBD4jZsjhLRO2a" onclick="openLb('12fB5jEhX2KIvxLBZwUZBD4jZsjhLRO2a')">
+        <img src="https://drive.google.com/thumbnail?id=12fB5jEhX2KIvxLBZwUZBD4jZsjhLRO2a&sz=w600" alt="Kitchen" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Kitchen</div>
+      </div>
+      <div class="pc" data-cat="kitchen" data-id="1Fh36Th11jutjVM5888odlezXqaNbVbXV" onclick="openLb('1Fh36Th11jutjVM5888odlezXqaNbVbXV')">
+        <img src="https://drive.google.com/thumbnail?id=1Fh36Th11jutjVM5888odlezXqaNbVbXV&sz=w600" alt="Kitchen" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Kitchen</div>
+      </div>
+      <div class="pc" data-cat="kitchen" data-id="122g_s8JYyMgsYm12SQWGDhQeqDyuJSXH" onclick="openLb('122g_s8JYyMgsYm12SQWGDhQeqDyuJSXH')">
+        <img src="https://drive.google.com/thumbnail?id=122g_s8JYyMgsYm12SQWGDhQeqDyuJSXH&sz=w600" alt="Kitchen" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Kitchen</div>
+      </div>
+      <div class="pc" data-cat="bathroom" data-id="1LCFsyicim2RHnSQRXKCCfPZcSt3AYrWf" onclick="openLb('1LCFsyicim2RHnSQRXKCCfPZcSt3AYrWf')">
+        <img src="https://drive.google.com/thumbnail?id=1LCFsyicim2RHnSQRXKCCfPZcSt3AYrWf&sz=w600" alt="Bathrooms" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Bathrooms</div>
+      </div>
+      <div class="pc" data-cat="bathroom" data-id="1YHo-mpaZE45XbB_INZEVSZBN-hIujcRC" onclick="openLb('1YHo-mpaZE45XbB_INZEVSZBN-hIujcRC')">
+        <img src="https://drive.google.com/thumbnail?id=1YHo-mpaZE45XbB_INZEVSZBN-hIujcRC&sz=w600" alt="Bathrooms" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Bathrooms</div>
+      </div>
+      <div class="pc" data-cat="bathroom" data-id="1qib09V6HCvd4n_xmljqIwXbIDGC6y_H7" onclick="openLb('1qib09V6HCvd4n_xmljqIwXbIDGC6y_H7')">
+        <img src="https://drive.google.com/thumbnail?id=1qib09V6HCvd4n_xmljqIwXbIDGC6y_H7&sz=w600" alt="Bathrooms" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Bathrooms</div>
+      </div>
+      <div class="pc" data-cat="bathroom" data-id="1a0QfvW_9ZYxeT9PC-kvMdBmtH0f24jcN" onclick="openLb('1a0QfvW_9ZYxeT9PC-kvMdBmtH0f24jcN')">
+        <img src="https://drive.google.com/thumbnail?id=1a0QfvW_9ZYxeT9PC-kvMdBmtH0f24jcN&sz=w600" alt="Bathrooms" loading="lazy" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+        <div class="pl">Bathrooms</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCATION -->
+  <div class="loc-row">
+    <div class="card">
+      <div class="ctitle">Location</div>
+      <div style="font-size:.88rem;color:var(--ink);padding:4px 0 14px">
+        <strong>Montvert Finesse</strong><br>
+        <span style="color:var(--mid)">Baner-Pashan Link Road<br>Baner, Pune 411045<br>Maharashtra, India</span>
+      </div>
+      <a href="https://maps.google.com/?q=Montvert+Finesse+Baner+Pashan+Link+Road+Pune" target="_blank" class="map-btn">Open in Google Maps →</a>
+    </div>
+    <div class="card">
+      <div class="ctitle">Nearby</div>
+      <div class="nearby-grid">
+        <div class="ni"><span>💻</span> Hinjawadi IT Park</div>
+        <div class="ni"><span>🏢</span> Baner Tech Offices</div>
+        <div class="ni"><span>🛍️</span> Balewadi High Street</div>
+        <div class="ni"><span>🏥</span> Ruby Hall, Baner</div>
+        <div class="ni"><span>🎓</span> Symbiosis / DY Patil</div>
+        <div class="ni"><span>🛒</span> D-Mart, Baner</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENQUIRY -->
+  <div class="enquiry" id="enquiry">
+    <div>
+      <div class="eq-title">Rental Details</div>
+      <div class="eq-sub">All terms subject to confirmation · Site visits by appointment through your broker</div>
+      <div class="rental-grid">
+        <div class="rc"><div class="rk">Monthly Rent</div><div class="rv">₹51,000</div></div>
+        <div class="rc"><div class="rk">Security Deposit</div><div class="rv">₹2,00,000</div></div>
+        <div class="rc"><div class="rk">Available From</div><div class="rv">Immediately</div></div>
+        <div class="rc"><div class="rk">Min. Lease</div><div class="rv">11 months</div></div>
+        <div class="rc"><div class="rk">Maintenance</div><div class="rv">Society norms</div></div>
+        <div class="rc"><div class="rk">Brokerage</div><div class="rv">As applicable</div></div>
+      </div>
+    </div>
+    <div class="eq-right">
+      <div class="broker-cta">
+        <div class="broker-icon">🏢</div>
+        <div class="broker-msg">Contact your broker for more details and to schedule a site visit</div>
+        <div class="broker-note">Rental terms above are indicative. Final terms through your broker.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Montvert Finesse · Baner-Pashan Link Road · Pune 411045 · 3BHK Fully Furnished · Contact your broker for details
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lb">
+  <button class="lb-x" onclick="closeLb()">&#10005;</button>
+  <button class="lb-arr" id="lb-prev">&#8249;</button>
+  <img id="lb-img" src="" alt="" onerror="this.classList.add('error');this.parentElement.classList.add('img-err')">
+  <button class="lb-arr" id="lb-next">&#8250;</button>
+  <div id="lb-info"></div>
+</div>
+
+<script>
+// Tab filter
+const tabs = document.querySelectorAll('.tab');
+const cells = document.querySelectorAll('.pc');
+tabs.forEach(t => {
+  t.addEventListener('click', () => {
+    tabs.forEach(x => x.classList.remove('on'));
+    t.classList.add('on');
+    const f = t.dataset.filter;
+    cells.forEach(c => {
+      c.classList.toggle('hide', f !== 'all' && c.dataset.cat !== f);
+    });
+  });
+});
+
+// Lightbox
+const lb = document.getElementById('lb');
+const lbImg = document.getElementById('lb-img');
+const lbInfo = document.getElementById('lb-info');
+let allIds = ['1o2qn-Aj_U--GtusGUDZI1P3sVocKWhxL', '1Jja1mwLvFPBrVOXMqYaCB9rZ4st3UoM-', '1AkxrpaCx0PBqO_WGhYsAhKaun7MVFKI_', '1c2IWXTbSLdQBN_YnoujTbM0aTjlqORYI', '1wRnKq3QxLmHSLJQ8CJyfLBuLMKp6CcVP', '1tcj3A__VLk2-IUJTW4YBINF5NRPkgv37', '1vNJAI2O58qQqor80UFeze5AV8eZZxbtT', '10a5ebf3vQD0oOQmEMDNiI_hK9yWqFsGM', '1LgoYNzhIeXbmP3aP0hCIUB5Y5i4q8AwR', '1vVMAoDTG0KMaQkkQzoykSPiUjjCIqXue', '1F3pGoabsGid_XXmZi_dt01HhNz2ns3aR', '1JDQYa_UtI2kchJ_XyzUzIcavowH4XOA7', '1gKVIforQ6gAOiX0BQx-o00Ur-yN7tkxT', '1w2Riw114ysW-KQlE8itn9aqHGXBXIR89', '1K23_q0mBkFSLGSlPBkuNbPQ235jqKVCF', '1zdXuFR8vmv8OTLEz_ePoHWdiEAx-jILy', '1bPt6j62SAFJQSXK1iVg1gExa2g3Trjw-', '19Bwr4e4m5btO4UjVQS0ehCCZ5UotYods', '1taukEBwMEUUG7PXXERLRPNvJZEGBdbrQ', '1rBsOPz_604JXmZYChKPY7--iDl93G-W_', '1ebPm_iXDJ5CvSHwj4D69EDSbAon496OG', '19wygzQWQY0zDfW8AiehpdddP1dEkLCRq', '1tGnTtJLIS9kODTZ3Q2dZ1aH61s8BXNO1', '1aJ0oe6LnjCyc6GzyIBsWlhqfmdaC6TDu', '1qvb6P-SeuxCn26pbksWVsvodjur4IBSu', '1mDF76J6RPuWtzOgexB_Gvyi7efU6Eooj', '1EjzSOTJD2KItchsF__v-q3aI6cr383i2', '12fB5jEhX2KIvxLBZwUZBD4jZsjhLRO2a', '1Fh36Th11jutjVM5888odlezXqaNbVbXV', '122g_s8JYyMgsYm12SQWGDhQeqDyuJSXH', '1LCFsyicim2RHnSQRXKCCfPZcSt3AYrWf', '1YHo-mpaZE45XbB_INZEVSZBN-hIujcRC', '1qib09V6HCvd4n_xmljqIwXbIDGC6y_H7', '1a0QfvW_9ZYxeT9PC-kvMdBmtH0f24jcN'];
+let cur = 0;
+
+function visIds() {
+  return [...document.querySelectorAll('.pc:not(.hide)')].map(c => c.dataset.id);
+}
+
+function openLb(id) {
+  const ids = visIds();
+  cur = ids.indexOf(id);
+  if (cur < 0) cur = 0;
+  showLb(ids);
+  lb.classList.add('on');
+  document.body.style.overflow = 'hidden';
+}
+
+function showLb(ids) {
+  ids = ids || visIds();
+  lbImg.src = 'https://drive.google.com/thumbnail?id=' + ids[cur] + '&sz=w1200';
+  lbInfo.textContent = (cur+1) + ' / ' + ids.length;
+}
+
+function closeLb() { lb.classList.remove('on'); document.body.style.overflow = ''; }
+
+document.getElementById('lb-prev').onclick = () => {
+  const ids = visIds(); cur = (cur-1+ids.length)%ids.length; showLb(ids); };
+document.getElementById('lb-next').onclick = () => {
+  const ids = visIds(); cur = (cur+1)%ids.length; showLb(ids); };
+lb.addEventListener('click', e => { if(e.target===lb) closeLb(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('on')) return;
+  const ids = visIds();
+  if (e.key==='ArrowLeft')  { cur=(cur-1+ids.length)%ids.length; showLb(ids); }
+  if (e.key==='ArrowRight') { cur=(cur+1)%ids.length; showLb(ids); }
+  if (e.key==='Escape')     closeLb();
+});
+</script>
+</body>
+</html>
