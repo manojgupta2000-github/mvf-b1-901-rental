@@ -208,17 +208,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
 
 footer { text-align: center; padding: 14px 5%; font-size: .72rem; color: var(--faint); background: var(--white); border-top: 1px solid var(--rule); }
 
-/* ACCESS BANNER */
-.access-banner {
-  background: #fff8e1; border-bottom: 1px solid #ffe082;
-  padding: 10px 5%; display: flex; align-items: center;
-  justify-content: space-between; gap: 12px; font-size: .82rem;
-  color: #6d4c00;
-}
-.access-banner.hidden { display: none; }
-.access-banner a { color: #4a6741; font-weight: 600; }
-.banner-x { background: none; border: none; cursor: pointer; font-size: 1.1rem; color: #6d4c00; padding: 0 4px; flex-shrink: 0; }
-
 /* IMG PLACEHOLDER */
 .pc img.error, .m-main img.error, .m-side img.error {
   opacity: 0; position: absolute;
@@ -246,6 +235,17 @@ footer { text-align: center; padding: 14px 5%; font-size: .72rem; color: var(--f
 .broker-note {
   font-size: .75rem; color: var(--faint); line-height: 1.4;
 }
+
+
+/* DOWNLOAD BUTTON */
+.dl-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--white); border: 1.5px solid var(--rule);
+  color: var(--mid); padding: .35rem .95rem;
+  border-radius: 30px; font-size: .78rem; font-weight: 500;
+  text-decoration: none; transition: all .2s; white-space: nowrap;
+}
+.dl-btn:hover { border-color: var(--olive); color: var(--olive); background: var(--olive-lt); }
 
 /* NOT INCLUDED NOTE */
 .not-incl {
@@ -285,10 +285,6 @@ footer { text-align: center; padding: 14px 5%; font-size: .72rem; color: var(--f
 </head>
 <body>
 
-<div class="access-banner hidden" id="accessBanner">
-  <span>📸 <strong>Photos not showing?</strong> &nbsp;The Google Drive folder needs to be public: open Drive → right-click the photos folder → <strong>Share</strong> → General access → <strong>Anyone with the link</strong> → Viewer → Done. Then reload.</span>
-  <button class="banner-x" onclick="document.getElementById('accessBanner').classList.add('hidden')" title="Dismiss">✕</button>
-</div>
 
 <nav class="topbar">
   <span class="tb-brand">Montvert Finesse &nbsp;·&nbsp; Baner, Pune</span>
@@ -376,7 +372,13 @@ footer { text-align: center; padding: 14px 5%; font-size: .72rem; color: var(--f
   <div class="gal-section">
     <div class="gal-header">
       <span class="gal-label">All photos</span>
-      <span class="gal-count">34 photos · Montvert Finesse, Baner</span>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <span class="gal-count">34 photos · Montvert Finesse, Baner</span>
+        <a href="https://drive.google.com/drive/folders/1seWTP3f1vXZkWRfQam1wog8Y6GcRdj77?usp=sharing" target="_blank" class="dl-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download All Photos
+        </a>
+      </div>
     </div>
     <div class="tabs">
       <button class="tab on" data-filter="all">All <span class="n">(34)</span></button>
